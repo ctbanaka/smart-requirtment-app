@@ -1,0 +1,24 @@
+.center {
+
+    display: block;
+  
+    margin-left: 8%;
+  
+     width: 20%;
+  
+     padding-top: 10px;
+  
+    }
+  
+    .button{
+      margin-top: -23px;
+    }
+  
+    .back{
+      font: bolder;
+    }
+  
+    .heading{
+      color: green;
+    }
+    
