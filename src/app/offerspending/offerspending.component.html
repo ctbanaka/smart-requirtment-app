@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="offerspending.component.css">
+</head>
+
+<body>
+
+    <h2>Offers Pending for Approvals</h2>
+     <div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>TotalExp.</th>
+            <th>Skill</th>
+            <th>details</th>
+        </tr>
+        <tr *ngFor= "let offerp of offers | paginate:{ itemsPerPage: tableSize,
+            currentPage: page,
+            totalItems: count}; let i = index">
+            <td>{{offerp.name}}</td>
+            <td>&nbsp; &nbsp; &nbsp; &nbsp; {{offerp.totalexp}}</td>
+            <td>{{offerp.skills}} </td>
+            <td><button class="accordion"></button>
+                <div class="panel">
+  
+</div>
+        </tr>
+
+    </table>
+    
+    <div class="pagination">
+
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+
+    </div>
+     </div>
+</body>
+
+</html>
