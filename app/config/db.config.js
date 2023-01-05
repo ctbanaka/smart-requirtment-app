@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: "ziggy.db.elephantsql.com",
-    USER: "awvhaebv",
-    PASSWORD: "DJVfhyWFC0inpLRhkserWTxb2QSb38nT",
-    DB: "awvhaebv",
+    HOST: "localhost",
+    USER: "postgres",
+    PASSWORD: "vishaldc",
+    DB: "postgres",
     dialect: "postgres",
     pool: {
       max: 5,
