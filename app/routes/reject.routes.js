@@ -6,7 +6,7 @@ module.exports= app => {
 
   router.post("/postreject",reject.create);
 
-  router.get("/reject")
+  router.get("/reject".reject.reject)
 
   app.use('/api', router);
 }
