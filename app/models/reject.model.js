@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
 
-    const Candidate = sequelize.define("reject",{
+    const reject = sequelize.define("reject",{
         
        year: {
         type: Sequelize.INTEGER
