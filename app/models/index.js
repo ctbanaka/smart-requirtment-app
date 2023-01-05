@@ -20,5 +20,5 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.candidate = require("./candidate.model.js")(sequelize, Sequelize);
-db.reject =    require("./reject.model.js")(sequelize, Sequelize);
+db.killMaster = require("./skill_master.model.js")(sequelize, Sequelize);
 module.exports = db;

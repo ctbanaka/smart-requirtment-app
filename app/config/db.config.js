@@ -1,8 +1,8 @@
 module.exports = {
     HOST: "localhost",
     USER: "postgres",
-    PASSWORD: "Sourav@224777",
-    DB: "smartapp",
+    PASSWORD: "chetan",
+    DB: "smart",
     dialect: "postgres",
     pool: {
       max: 5,
@@ -11,5 +11,4 @@ module.exports = {
       idle: 10000
     }
   };
- // postgres://username:password@hostname/databasename
- //postgres://awvhaebv:DJVfhyWFC0inpLRhkserWTxb2QSb38nT@ziggy.db.elephantsql.com/awvhaebv
+ 
