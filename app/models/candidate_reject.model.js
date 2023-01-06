@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) =>{
  
-    const CandidateJoiningDetails = sequelize.define("candidate_joining_details",{
+    const CandidateReject = sequelize.define("candidate__reject",{
 
         candidate_ID:{
             type: Sequelize.INTEGER,
@@ -52,6 +52,6 @@ module.exports = (sequelize, Sequelize) =>{
 
     });
     
-    return CandidateJoiningDetails;
+    return CandidateReject;
 }
 
