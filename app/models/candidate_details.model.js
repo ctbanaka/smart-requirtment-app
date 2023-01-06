@@ -33,18 +33,11 @@ module.exports = (sequelize, Sequelize) =>{
         tower:{
             type:Sequelize.STRING
         },
-        skill_ID:{
-            type:Sequelize.STRING
-        },
-        grade_ID:{
-            type:Sequelize.STRING
-        },
+         
         grade_proposed_bu:{
             type:Sequelize.STRING
         },
-        account_ID:{
-            type:Sequelize.STRING
-        },
+         
         arc_new_grade:{
             type:Sequelize.STRING
         },
