@@ -2,9 +2,9 @@ module.exports = (sequelize, Sequelize) =>{
  
     const candidateExperience = sequelize.define("candidate_experience",{
 
-        candidate_ID:{
-            type: Sequelize.INTEGER,    
-        },
+        // candidate_ID:{
+        //     type: Sequelize.INTEGER,    
+        // },
 
         relevant_exp:{
             type:Sequelize.INTEGER

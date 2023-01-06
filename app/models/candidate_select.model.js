@@ -2,94 +2,86 @@ module.exports = (sequelize, Sequelize) =>{
  
     const CandidateSelect = sequelize.define("candidate_select",{
 
-        candidate_ID:{
-            type: Sequelize.NUMBER,
-        },
+         
 
         l1_l2_Onhold:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: false
         },
 
         l1_l2_Select:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: false
         },
         
         l1_l2_Scheduled:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: false
         },
 
         l3_Scheduled:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: false
         },
 
         l2_Scheduled:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: true
         },
 
         l1_Scheduled:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: true
         },
 
         joined:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: true
         },
 
         offer_accept:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             foreignKey: true
         },
 
         bu_approved:{
-            type:Sequelize.NUMBER,
+            type:Sequelize.INTEGER,
             foreignKey: true
         },
 
         l1_select:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.INTEGER,
             allowNull: true
         },
 
         l2_select:{
-            type:Sequelize.NUMBER,
+            type:Sequelize.INTEGER,
             foreignKey: true,
         },
 
         l3_select:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.INTEGER,
             allowNull: true
         },
 
         prescreen_select:{
-            type:Sequelize.NUMBER,
+            type:Sequelize.INTEGER,
             allowNull: true
         },
 
         created_by:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.INTEGER,
             allowNull: true
         },
 
-        // created_date:{
-        //     type:Sequelize.DATE,
-        //     allowNull: true
-        // },
+         
 
         updated_by:{
-            type:Sequelize.VARCHAR,
+            type:Sequelize.STRING,
             allowNull: true
         },
 
-        // updated_date:{
-        //     type:Sequelize.DATE,
-        //     allowNull: true
-        // },
+         
     });
     
     return CandidateSelect;
