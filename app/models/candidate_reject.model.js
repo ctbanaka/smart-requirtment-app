@@ -2,11 +2,11 @@ module.exports = (sequelize, Sequelize) =>{
  
     const CandidateReject = sequelize.define("candidate_reject",{
 
-        candidate_ID:{
-            type: Sequelize.INTEGER,
-            autoIncrement: true,
+        // candidate_ID:{
+        //     type: Sequelize.INTEGER,
+        //     autoIncrement: true,
     
-        },
+        // },
 
         l1_l2_reject:{
             type:Sequelize.STRING,
