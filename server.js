@@ -12,9 +12,9 @@ app.use(cors(corsOptions));
 
 
 const db = require("./app/models");
-db.sequelize.sync()
+db.sequelize.sync({force:true})
   .then(() => {
-    console.log("drop n Synced db.");
+    console.log("Synced db.");
   })
   .catch((err) => {
     console.log("Failed to sync db: " + err.message);

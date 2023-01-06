@@ -3,22 +3,22 @@ module.exports = (sequelize, Sequelize) =>{
  
     const SkillMaster = sequelize.define("skill_master",{
 
-        skillId:{
+        skill_ID:{
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
 
-        skillName:{
+        skill_name:{
             type:Sequelize.STRING,
             allowNull: false
         },
 
-        createdBy:{
+        created_by:{
             type:Sequelize.STRING
         },
         
-        updatedBy:{
+        updated_by:{
             type:Sequelize.STRING
         }
     });
