@@ -2,12 +2,6 @@ module.exports = (sequelize, Sequelize) =>{
  
     const CandidateJoiningDetails = sequelize.define("candidate_joining_details",{
 
-        // candidate_ID:{
-        //     type: Sequelize.INTEGER,
-        //     autoIncrement: true,
-        //     primaryKey: true
-        // },
-
         doj:{
             type:Sequelize.DATE,
             allowNull: false

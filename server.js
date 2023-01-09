@@ -12,7 +12,7 @@ app.use(cors(corsOptions));
 
 
 const db = require("./app/models");
-db.sequelize.sync({force:true})
+db.sequelize.sync({force:false})
   .then(() => {
     console.log("Synced db.");
   })
@@ -30,9 +30,17 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to the application." });
 });
 
+// const swaggerUi = require("swagger-ui-express");
+// const swaggerDocument = require("./swagger.json");
+
+// app.use(
+//   '/sra',
+//   swaggerUi.serve, 
+//   swaggerUi.setup(swaggerDocument)
+// );
 
 require("./app/routes/candidate.routes")(app);
-
+require("./app/routes/skill_master.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

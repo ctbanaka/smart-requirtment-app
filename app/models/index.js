@@ -34,8 +34,8 @@ db.candidateJoiningDetails= require("./candidate_joining_details.model.js")(sequ
 
 
 db.candidateDetails.belongsTo(db.skillMaster,{foriegnKey:'skill_id'});
-db.candidateDetails.belongsTo(db.gradeMaster,{foriegnKey:'geade_id'});
-db.candidateDetails.belongsTo(db.accountMaster,{foriegnKey:'account_id'})
+db.candidateDetails.belongsTo(db.gradeMaster,{foriegnKey:'grade_id'});
+db.candidateDetails.belongsTo(db.accountMaster,{foriegnKey:'account_id'});
 db.candidateExperience.belongsTo(db.candidateDetails);
 db.candidateCTC.belongsTo(db.candidateDetails);
 db.candidateFeedbackInfo.belongsTo(db.candidateDetails,{foriegnKey:'candidate_Id'});
