@@ -41,13 +41,14 @@ module.exports = (sequelize, Sequelize) =>{
 
         offer_accept:{
             type:Sequelize.BOOLEAN,
-            foreignKey: true
+             
         },
 
         bu_approved:{
             type:Sequelize.BOOLEAN,
-            foreignKey: true
+            
         },
+       
 
         l1_select:{
             type:Sequelize.BOOLEAN,
@@ -56,7 +57,7 @@ module.exports = (sequelize, Sequelize) =>{
 
         l2_select:{
             type:Sequelize.BOOLEAN,
-            foreignKey: true,
+            
         },
 
         l3_select:{
@@ -73,13 +74,19 @@ module.exports = (sequelize, Sequelize) =>{
             type:Sequelize.STRING
         },
 
+        data:{
+             type:Sequelize.STRING
+            },
+
+        count:{
+            type:Sequelize.INTEGER
+        },
+
         created_by:{
             type:Sequelize.STRING,
             allowNull: true
         },
         
-         
-
         updated_by:{
             type:Sequelize.STRING,
             allowNull: true
