@@ -5,75 +5,79 @@ module.exports = (sequelize, Sequelize) =>{
          
 
         l1_l2_Onhold:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: false
         },
 
         l1_l2_Select:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: false
         },
         
         l1_l2_Scheduled:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: false
         },
 
         l3_Scheduled:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: false
         },
 
         l2_Scheduled:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: true
         },
 
         l1_Scheduled:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: true
         },
 
         joined:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             allowNull: true
         },
 
         offer_accept:{
-            type:Sequelize.STRING,
+            type:Sequelize.BOOLEAN,
             foreignKey: true
         },
 
         bu_approved:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.BOOLEAN,
             foreignKey: true
         },
 
         l1_select:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.BOOLEAN,
             allowNull: true
         },
 
         l2_select:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.BOOLEAN,
             foreignKey: true,
         },
 
         l3_select:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.BOOLEAN,
             allowNull: true
         },
 
         prescreen_select:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.BOOLEAN,
             allowNull: true
+        },
+
+        colorcode:{
+            type:Sequelize.STRING
         },
 
         created_by:{
-            type:Sequelize.INTEGER,
+            type:Sequelize.STRING,
             allowNull: true
         },
-
+        
          
 
         updated_by:{
