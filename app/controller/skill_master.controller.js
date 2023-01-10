@@ -2,7 +2,7 @@ const db = require("../models");
 const SkillMaster= db.skillMaster;
 const Op = db.Sequelize.Op;
 
-exports.create = (req,res)=>{
+exports.create = async(req,res)=>{
     console.log("hiiiiii");
     if (!req.body) {
         res.status(400).send({
@@ -18,7 +18,7 @@ exports.create = (req,res)=>{
             updated_by:req.body.updated_by
         };
 
-        SkillMaster.create(skills)
+      await  SkillMaster.create(skills)
         .then(data => {
             res.send(data);
         })
@@ -29,3 +29,8 @@ exports.create = (req,res)=>{
             });
         });
   };
+
+  exports.getAll = async (req, res) => {
+    let data= await SkillMaster.findAll()
+       res.send(data);
+  }
