@@ -74,11 +74,11 @@ module.exports = (sequelize, Sequelize) =>{
             type:Sequelize.STRING
         },
 
-        data:{
+        labelling:{
              type:Sequelize.STRING
             },
 
-        count:{
+        selectratio:{
             type:Sequelize.INTEGER
         },
 
