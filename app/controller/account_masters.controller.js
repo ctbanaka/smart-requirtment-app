@@ -1,10 +1,10 @@
-const db = require("../models");
-const SkillMaster= db.skillMaster;
-const candidateExperience = db.candidateExperience;
-const Op = db.Sequelize.Op;
+  //post
 
-//get for skill master table
-exports.create = async(req,res)=>{
+  const db = require("../models");
+  const accountMaster= db.accountMaster;
+  const Op = db.Sequelize.Op;
+
+  exports.create = async(req,res)=>{
     console.log("hiiiiii");
     if (!req.body) {
         res.status(400).send({
@@ -14,13 +14,16 @@ exports.create = async(req,res)=>{
     }
     else{console.log("working")};
 
-        const skills= {
-            skill_name:req.body.skill_name,
-            created_by:req.body.created_by,
-            updated_by:req.body.updated_by
+        const accounts= {
+            accountId:req.body.accountId,
+            accountName:req.body.accountName,
+            createdBy:req.body.createdBy,
+            updatedBy:req.body.updatedBy,
+            createdAt:req.body.createdAt,
+            updatedAt:req.body.updatedAt
         };
 
-      await  SkillMaster.create(skills)
+      await  accountMaster.create(accounts)
         .then(data => {
             res.send(data);
         })
@@ -33,8 +36,8 @@ exports.create = async(req,res)=>{
   };
 
 
-
+  //get all
   exports.getAll = async (req, res) => {
-    let data= await SkillMaster.findAll()
+    let data= await accountMaster.findAll()
        res.send(data);
   }

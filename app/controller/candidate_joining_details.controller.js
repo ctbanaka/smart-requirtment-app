@@ -1,8 +1,8 @@
-const db = require("../models");
-const GradeMaster= db.gradeMaster;
-const Op = db.Sequelize.Op;
+  //post
 
-exports.create = async(req,res)=>{
+  const { candidateJoiningDetails } = require("../models");
+
+  exports.create = async(req,res)=>{
     console.log("hiiiiii");
     if (!req.body) {
         res.status(400).send({
@@ -10,14 +10,23 @@ exports.create = async(req,res)=>{
         });
         return;
     }
+    else{console.log("working")};
 
-        const grade= {
-            grade_name:req.body.grade_name,
+        const joining= {
+            doj:req.body.doj,
+
+            joining_month:req.body.joining_month,
+
+            notice_period:req.body.notice_period,
+
             created_by:req.body.created_by,
-            updated_by:req.body.updated_by
+
+            updated_by:req.body.updated_by,
+
+
         };
 
-      await GradeMaster.create(grade)
+      await  candidateJoiningDetails.create(joining)
         .then(data => {
             res.send(data);
         })
@@ -29,8 +38,10 @@ exports.create = async(req,res)=>{
         });
   };
 
-  //get all
+
+
+  //get all 
   exports.getAll = async (req, res) => {
-    let data= await gradeMaster.findAll()
+    let data= await candidateJoiningDetails.findAll()
        res.send(data);
   }

@@ -28,3 +28,4 @@ router.post("/addgrade",gradeMaster.create);
 router.get("/allgrade", gradeMaster.getAll);
 
 module.exports = router;
+ 

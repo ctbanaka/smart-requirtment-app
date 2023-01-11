@@ -38,6 +38,5 @@ exports.postCandidate = async (req, res) =>{
     await CandidateDetails.create(candidate)
     .then(data => {
         res.send(data);
-    });
-
+    })
 }
