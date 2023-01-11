@@ -24,11 +24,11 @@ exports.create = (req,res)=>{
         l3_select:req.body.l3_select,
         prescreen_select:req.body.prescreen_select,
         colorcode:req.body.colorcode,
-        data:req.body.data,
-        count:req.body.count,
+        labelling:req.body.labelling,
+        selectratio:req.body.selectratio,
         created_by:req.body.created_by,
         updated_by:req.body.updated_by,
-
+        joining_bonus:req.body.joining_bonus
 
 }
 
