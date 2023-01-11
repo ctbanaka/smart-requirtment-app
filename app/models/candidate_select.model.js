@@ -6,22 +6,22 @@ module.exports = (sequelize, Sequelize) =>{
 
         l1_l2_Onhold:{
             type:Sequelize.BOOLEAN,
-            allowNull: false
+           // allowNull: false
         },
 
         l1_l2_Select:{
             type:Sequelize.BOOLEAN,
-            allowNull: false
+            //allowNull: false
         },
         
         l1_l2_Scheduled:{
             type:Sequelize.BOOLEAN,
-            allowNull: false
+          //  allowNull: false
         },
 
         l3_Scheduled:{
             type:Sequelize.BOOLEAN,
-            allowNull: false
+          //  allowNull: false
         },
 
         l2_Scheduled:{
