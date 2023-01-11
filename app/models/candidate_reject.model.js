@@ -44,7 +44,7 @@ module.exports = (sequelize, Sequelize) =>{
              type:Sequelize.STRING
             },
 
-        rejectratio:{
+        ratio:{
             type:Sequelize.INTEGER
         },
         created_by:{

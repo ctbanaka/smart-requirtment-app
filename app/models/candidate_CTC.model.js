@@ -34,7 +34,7 @@ module.exports = (sequelize, Sequelize) =>{
             type:Sequelize.STRING
         },
         holding_offer:{
-            type:Sequelize.STRING
+            type:Sequelize.BOOLEAN
         },
         created_by:{
             type:Sequelize.STRING
