@@ -8,16 +8,16 @@ module.exports = (sequelize, Sequelize) =>{
             primaryKey: true
         },
 
-        candidate_Name:{
+        candidate_name:{
             type:Sequelize.STRING,
             allowNull: false
         },
-        email_Id:{
+        email_id:{
             type:Sequelize.STRING,
             allowNull: false
         },
         no_of_year:{
-            type:Sequelize.STRING,
+            type:Sequelize.INTEGER,
             allowNull: false
         },
         current_company:{

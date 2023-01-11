@@ -15,6 +15,6 @@ const Candidate = sequelize.define("candidate",{
    }
 
 });
- 
+
 return Candidate;
 }
