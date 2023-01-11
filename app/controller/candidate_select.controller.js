@@ -9,7 +9,29 @@
 //         });
 //         return;
 //     }
-//         const candidateSelect= {candidateSelect:req.body};
+       const candidateSelect= {
+        l1_l2_onhold:req.body.l1_l2_onhold,
+        l1_l2_select:req.body.l1_l2_select,
+        l1_l2_scheduled:req.body.l1_l2_scheduled,
+        l3_scheduled:req.body.l3_scheduled,
+        l2_scheduled:req.body.l2_scheduled,
+        l1_scheduled:req.body.l1_scheduled,
+        joined:req.body.joined,
+        offer_accept:req.body.offer_accept,
+        bu_approved:req.body.bu_approved,
+        l1_select:req.body.l1_select,
+        l2_select:req.body.l2_select,
+        l3_select:req.body.l3_select,
+        prescreen_select:req.body.prescreen_select,
+        colorcode:req.body.colorcode,
+        data:req.body.data,
+        count:req.body.count,
+        created_by:req.body.created_by,
+        updated_by:req.body.updated_by,
+
+
+}
+
 
 //         CandidateSelect.create(candidateSelect)
 //         .then(data => {
