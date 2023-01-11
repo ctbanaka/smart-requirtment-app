@@ -33,7 +33,7 @@ db.candidateCTC= require("./candidate_CTC.model.js")(sequelize, Sequelize);
 db.candidateJoiningDetails= require("./candidate_joining_details.model.js")(sequelize, Sequelize);
 
 
-db.candidateDetails.belongsTo(db.skillMaster,{foriegnKey:'skill_id'});
+db.candidateDetails.belongsTo(db.skillMaster,{foriegnKey:'skill_ID', targetKey:'skill_ID'});
 db.candidateDetails.belongsTo(db.gradeMaster,{foriegnKey:'grade_id'});
 db.candidateDetails.belongsTo(db.accountMaster,{foriegnKey:'account_id'});
 db.candidateExperience.belongsTo(db.candidateDetails);

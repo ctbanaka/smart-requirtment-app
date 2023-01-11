@@ -70,6 +70,10 @@ module.exports = (sequelize, Sequelize) =>{
             allowNull: true
         },
 
+        joining_bonus:{
+            type:Sequelize.INTEGER
+        },
+
         colorcode:{
             type:Sequelize.STRING
         },

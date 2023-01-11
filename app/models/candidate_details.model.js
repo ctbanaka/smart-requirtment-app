@@ -42,7 +42,7 @@ module.exports = (sequelize, Sequelize) =>{
             type:Sequelize.STRING
         },
         salary:{
-            type:Sequelize.STRING
+            type:Sequelize.INTEGER
         },
         arc_deviation_new_grade:{
             type:Sequelize.STRING

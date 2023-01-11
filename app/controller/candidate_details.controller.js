@@ -12,7 +12,6 @@ exports.postCandidate = async (req, res) =>{
     };
 
     const candidate = {
-        candidate_Id:req.body.candidate_Id,
         candidate_name:req.body.candidate_name,
         email_id:req.body.email_id,
         no_of_year: req.body.no_of_year,
@@ -23,6 +22,7 @@ exports.postCandidate = async (req, res) =>{
         grade_proposed_bu:req.body.grade_proposed_bu,
         arc_new_grade:req.body.arc_new_grade,
         salary:req.body.salary,
+        skill_ID:req.body.skill_ID,
         arc_deviation_new_grade:req.body.arc_deviation_new_grade,
         B1:req.body.B1,
         B2:req.body.B2,
@@ -30,7 +30,7 @@ exports.postCandidate = async (req, res) =>{
         C2:req.body.C2,
         D1:req.body.D1,
         D2:req.body.D2,
-
+        
 
         
     };
