@@ -16,7 +16,8 @@ router.post('/postcandidate',candidateDetails.postCandidate)
 
 // router.post("/addcandidateselect",candidateSelect.create);
 // router.get("/allcandidateselect", candidateSelect.getAll);
-router.post("/candidateselected",candidateSelect.create)
+router.post("/candidateselected",candidateSelect.create);
+router.get("/joiningbonus", candidateSelect.joiningBonus)
 
 router.post("/addskill",skillMaster.create);
 router.get("/allskills", skillMaster.getAll);

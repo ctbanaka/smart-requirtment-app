@@ -44,3 +44,13 @@ exports.create = (req,res)=>{
             });
         });
   }
+
+  exports.joiningBonus= async (req,res)=>{
+   let data= await CandidateSelect.count({where:{joining_bonus: {
+            [Op.not]: null
+        }
+    }
+    })
+    console.log(data);
+    res.send({bonus:data});
+  }
