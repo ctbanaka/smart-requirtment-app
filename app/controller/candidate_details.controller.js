@@ -38,6 +38,7 @@ exports.postCandidate = async (req, res) =>{
     };
 
     await  CandidateDetails.create(candidate)
+<<<<<<< HEAD
         .then(data => {
             res.send(data);
         })
@@ -53,3 +54,37 @@ exports.postCandidate = async (req, res) =>{
     let data= await CandidateDetails.findAll()
        res.send(data);
   }
+=======
+
+        .then(data => {
+
+            res.send(data);
+
+        })
+
+        .catch(err => {
+
+            res.status(500).send({
+
+                message:
+
+                    err.message || "Some error occurred while creating the data."
+
+            });
+
+        });
+
+  };
+
+
+
+  exports.getAll = async (req, res) => {
+
+    let data= await CandidateDetails.findAll()
+
+       res.send(data);
+
+  }
+
+
+>>>>>>> 83b8f9fe3ca84e4faa63b68e547e02c15b471365

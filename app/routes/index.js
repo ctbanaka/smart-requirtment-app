@@ -8,6 +8,7 @@ const candidateCTC= require('../controller/cnadidate_ctc.controller')
 const accountMaster = require('../controller/account_master.controller');
 const candidateSelect= require("../controller/candidate_select.controller")
 
+
 router.post("/addaccount",accountMaster.create);
 router.get("/allaccount", accountMaster.getAll);
 
