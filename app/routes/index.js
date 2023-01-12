@@ -9,10 +9,14 @@ const candidate = require('../controller/candidate.controller')
 const accountMaster = require('../controller/account_master.controller');
 const candidateSelect= require("../controller/candidate_select.controller")
 
+
 router.post("/addaccount",accountMaster.create);
 router.get("/allaccount", accountMaster.getAll);
 
 router.post('/postcandidate',candidateDetails.postCandidate);
+
+//router.post("/addcandidate",candidateDetails.create);
+router.get("/allcandidate", candidateDetails.getAll);;
 router.get('/ratio', candidate.ratio);
 
 router.post("/candidateselected",candidateSelect.create);
