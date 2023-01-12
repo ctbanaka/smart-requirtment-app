@@ -31,8 +31,8 @@ exports.postCandidate = async (req, res) =>{
         D2:req.body.D2,
         skillMasterSkillID:req.body.skillMasterSkillID,
         gradeMasterGradeID:req.body.gradeMasterGradeID,
-        accountMasterAccountID:req.body.accountMasterAccountID
-        
+        accountMasterAccountID:req.body.accountMasterAccountID,
+        is_offerred:req.body.is_offerred 
 
         
     };
@@ -41,4 +41,14 @@ exports.postCandidate = async (req, res) =>{
     .then(data => {
         res.send(data);
     })
+}
+
+exports.pendingOffers= async (req,res)=>{
+        let data= await CandidateDetails.count({where:{is_offerred:{
+            [Op.is]: null
+        }}});
+        if(!data){
+            res.send("no pending offers")
+        }
+        res.send({pendingoffers:data})
 }

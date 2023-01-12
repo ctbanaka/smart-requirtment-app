@@ -44,6 +44,9 @@ module.exports = (sequelize, Sequelize) =>{
         salary:{
             type:Sequelize.INTEGER
         },
+        is_offerred:{
+           type:Sequelize.BOOLEAN 
+        },
         arc_deviation_new_grade:{
             type:Sequelize.STRING
         },

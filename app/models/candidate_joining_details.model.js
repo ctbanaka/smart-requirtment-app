@@ -12,7 +12,7 @@ module.exports = (sequelize, Sequelize) =>{
         },
         
         notice_period:{
-            type:Sequelize.STRING
+            type:Sequelize.INTEGER
         },
         created_by:{
             type:Sequelize.STRING

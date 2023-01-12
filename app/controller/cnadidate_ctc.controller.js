@@ -37,14 +37,12 @@ exports.create = async(req,res)=>{
   };
 
 
-  exports.pendingOffers= async (req,res)=>{
-    let data= await CandidateCTC.count({where:{holding_offer:true}});
-    if(data==null){
-        res.send("no pending offers")
-    }
-    res.send({pendingoffers:data})
+//   exports.pendingOffers= async (req,res)=>{
+//     let data= await CandidateCTC.count({where:{holding_offer:true}});
+//     if(data==null){
+//         res.send("no pending offers")
+//     }
+//     res.send({pendingoffers:data})
     
-
-
-  }
+//}
 

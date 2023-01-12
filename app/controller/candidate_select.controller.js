@@ -9,6 +9,9 @@ exports.create = (req,res)=>{
         });
         return;
     }
+
+    
+
        const candidateSelect= {
         candidateDetailCandidateId:req.body.candidateDetailCandidateId,
         l1_l2_onhold:req.body.l1_l2_onhold,
@@ -48,7 +51,7 @@ exports.create = (req,res)=>{
 
   exports.joiningBonus= async (req,res)=>{
    let data= await CandidateSelect.count({where:{joining_bonus: {
-            [Op.not]: null
+            [Op.is]: null
         }
     }
     })

@@ -2,10 +2,6 @@ module.exports = (sequelize, Sequelize) =>{
  
     const candidateFeedback = sequelize.define("candidate_feedback_info",{
 
-        // candidate_ID:{
-        //     type: Sequelize.INTEGER  
-        // },
-
         l1_panel_name:{
             type:Sequelize.STRING
         
