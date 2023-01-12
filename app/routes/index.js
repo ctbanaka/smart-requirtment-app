@@ -11,7 +11,10 @@ const candidateSelect= require("../controller/candidate_select.controller")
 router.post("/addaccount",accountMaster.create);
 router.get("/allaccount", accountMaster.getAll);
 
-router.post('/postcandidate',candidateDetails.postCandidate)
+router.post('/postcandidate',candidateDetails.postCandidate);
+
+//router.post("/addcandidate",candidateDetails.create);
+router.get("/allcandidate", candidateDetails.getAll);
 
 router.post("/candidateselected",candidateSelect.create);
 router.get("/joiningbonus", candidateSelect.joiningBonus);

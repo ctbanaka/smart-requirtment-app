@@ -37,8 +37,19 @@ exports.postCandidate = async (req, res) =>{
         
     };
 
-    await CandidateDetails.create(candidate)
-    .then(data => {
-        res.send(data);
-    })
-}
+    await  CandidateDetails.create(candidate)
+        .then(data => {
+            res.send(data);
+        })
+        .catch(err => {
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while creating the data."
+            });
+        });
+  };
+
+  exports.getAll = async (req, res) => {
+    let data= await CandidateDetails.findAll()
+       res.send(data);
+  }
