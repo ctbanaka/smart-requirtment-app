@@ -16,7 +16,7 @@ router.get("/allaccount", accountMaster.getAll);
 router.post('/postcandidate',candidateDetails.postCandidate);
 
 //router.post("/addcandidate",candidateDetails.create);
-router.get("/allcandidate", candidateDetails.getAll);;
+//router.get("/allcandidate", candidateDetails.getAll);;
 router.get('/ratio', candidate.ratio);
 
 router.post("/candidateselected",candidateSelect.create);

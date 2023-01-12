@@ -8,7 +8,7 @@ module.exports = (sequelize, Sequelize) =>{
         },
 
         l1_avarage_rating:{
-            type:Sequelize.STRING
+            type:Sequelize.INTEGER
         },
         
         l2_panel_name:{
@@ -17,7 +17,7 @@ module.exports = (sequelize, Sequelize) =>{
         },
 
         l2_avarage_rating:{
-            type:Sequelize.STRING
+            type:Sequelize.INTEGER
         },
          
         created_by:{
