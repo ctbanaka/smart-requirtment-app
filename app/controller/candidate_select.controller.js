@@ -10,6 +10,7 @@ exports.create = (req,res)=>{
         return;
     }
        const candidateSelect= {
+        candidateDetailCandidateId:req.body.candidateDetailCandidateId,
         l1_l2_onhold:req.body.l1_l2_onhold,
         l1_l2_select:req.body.l1_l2_select,
         l1_l2_scheduled:req.body.l1_l2_scheduled,
@@ -29,7 +30,7 @@ exports.create = (req,res)=>{
         created_by:req.body.created_by,
         updated_by:req.body.updated_by,
         joining_bonus:req.body.joining_bonus
-
+        
 }
 
 

@@ -42,10 +42,19 @@ db.gradeMaster.hasMany(db.candidateDetails,{ foreignKey: { allowNull: false }, o
 db.candidateDetails.belongsTo(db.accountMaster,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
 db.accountMaster.hasMany(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
 
-db.candidateExperience.belongsTo(db.candidateDetails);
-db.candidateCTC.belongsTo(db.candidateDetails);
-db.candidateFeedbackInfo.belongsTo(db.candidateDetails,{foriegnKey:'candidate_Id'});
-db.candidateSelect.belongsTo(db.candidateDetails);
-db.candidateReject.belongsTo(db.candidateDetails);
+db.candidateExperience.belongsTo(db.candidateDetails,{ foreignKey: { allowNull: false,unique: true }, onDelete: 'CASCADE' });
+db.candidateDetails.hasOne(db.candidateExperience,{ foreignKey: { allowNull: false,unique: true }, onDelete: 'CASCADE' });
+
+db.candidateCTC.belongsTo(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+db.candidateDetails.hasOne(db.candidateCTC,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' })
+
+db.candidateFeedbackInfo.belongsTo(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+db.candidateDetails.hasOne(db.candidateFeedbackInfo,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' })
+
+db.candidateSelect.belongsTo(db.candidateDetails,{ foreignKey: { allowNull:false,unique: true }, onDelete: 'CASCADE' });
+db.candidateDetails.hasOne(db.candidateSelect,{ foreignKey: { allowNull:false,unique: true }, onDelete: 'CASCADE' });
+
+db.candidateReject.belongsTo(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+db.candidateDetails.hasOne(db.candidateReject,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' })
 
 module.exports = db;

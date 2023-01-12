@@ -4,70 +4,63 @@ module.exports = (sequelize, Sequelize) =>{
 
          
 
-        l1_l2_Onhold:{
+        l1_l2_onhold:{
             type:Sequelize.BOOLEAN,
-           // allowNull: false
+            allowNull: false
         },
 
-        l1_l2_Select:{
+        l1_l2_select:{
             type:Sequelize.BOOLEAN,
-            //allowNull: false
+            allowNull: false
         },
         
-        l1_l2_Scheduled:{
+        l1_l2_scheduled:{
             type:Sequelize.BOOLEAN,
-          //  allowNull: false
+            allowNull: false
         },
 
-        l3_Scheduled:{
+        l3_scheduled:{
             type:Sequelize.BOOLEAN,
-          //  allowNull: false
+            allowNull: false
         },
 
-        l2_Scheduled:{
+        l2_scheduled:{
             type:Sequelize.BOOLEAN,
-            allowNull: true
+           
         },
 
-        l1_Scheduled:{
+        l1_scheduled:{
             type:Sequelize.BOOLEAN,
-            allowNull: true
+            
         },
 
         joined:{
             type:Sequelize.BOOLEAN,
-            allowNull: true
+           
         },
 
         offer_accept:{
-            type:Sequelize.BOOLEAN,
-             
+            type:Sequelize.BOOLEAN,  
         },
-
         bu_approved:{
-            type:Sequelize.BOOLEAN,
-            
+            type:Sequelize.BOOLEAN,            
         },
        
 
         l1_select:{
             type:Sequelize.BOOLEAN,
-            allowNull: true
         },
 
         l2_select:{
-            type:Sequelize.BOOLEAN,
-            
+            type:Sequelize.BOOLEAN,  
         },
 
         l3_select:{
             type:Sequelize.BOOLEAN,
-            allowNull: true
         },
 
         prescreen_select:{
             type:Sequelize.BOOLEAN,
-            allowNull: true
         },
 
         joining_bonus:{
