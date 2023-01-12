@@ -31,6 +31,6 @@ exports.create = async(req,res)=>{
 
   //get all
   exports.getAll = async (req, res) => {
-    let data= await gradeMaster.findAll()
+    let data= await GradeMaster.findAll()
        res.send(data);
   }
