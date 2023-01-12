@@ -2,7 +2,7 @@ module.exports = (sequelize, Sequelize) =>{
  
     const AccountMaster = sequelize.define("account_master",{
 
-        accountId:{
+        accountID:{
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true

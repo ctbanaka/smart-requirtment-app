@@ -33,9 +33,15 @@ db.candidateCTC= require("./candidate_CTC.model.js")(sequelize, Sequelize);
 db.candidateJoiningDetails= require("./candidate_joining_details.model.js")(sequelize, Sequelize);
 
 
-db.candidateDetails.belongsTo(db.skillMaster,{foriegnKey:'skill_ID', targetKey:'skill_ID'});
-db.candidateDetails.belongsTo(db.gradeMaster,{foriegnKey:'grade_id'});
-db.candidateDetails.belongsTo(db.accountMaster,{foriegnKey:'account_id'});
+db.candidateDetails.belongsTo(db.skillMaster,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+db.skillMaster.hasMany(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+
+db.candidateDetails.belongsTo(db.gradeMaster,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+db.gradeMaster.hasMany(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+
+db.candidateDetails.belongsTo(db.accountMaster,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+db.accountMaster.hasMany(db.candidateDetails,{ foreignKey: { allowNull: false }, onDelete: 'CASCADE' });
+
 db.candidateExperience.belongsTo(db.candidateDetails);
 db.candidateCTC.belongsTo(db.candidateDetails);
 db.candidateFeedbackInfo.belongsTo(db.candidateDetails,{foriegnKey:'candidate_Id'});

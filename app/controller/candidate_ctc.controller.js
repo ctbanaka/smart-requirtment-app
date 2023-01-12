@@ -52,7 +52,7 @@
 
 
 
-  //get all 
+   
   exports.getAll = async (req, res) => {
     let data= await candidateCTC.findAll()
        res.send(data);
